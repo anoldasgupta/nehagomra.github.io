@@ -2,33 +2,82 @@
    var poPdemo = document.getElementById("poPdemo");
    var demo = document.getElementById("demo");
    var close = document.getElementById("close");
-   var vid = document.getElementById("myfirstVideo");
+   var vid = $("#myfirstVideo");
    var video = document.getElementById("myfirstVideo");
-   
-   if($(".popVid-data:hidden")){
-   	 setTimeout(function(){ $(poPdemo).fadeOut() }, 5000);
-   }else{
-   	$(poPdemo).show();
-   }
+   var isClicked = false;
+   // if($(".popVid-data").is(":hidden")){
+   	 // //setTimeout(function(){ if(!isClicked){$(poPdemo).fadeOut()} }, 5000);
+   // }else{
+   	// $(poPdemo).show();
+   // }
    
    function getCurTime() {
-     vid.pause(vid.currentTime);
+     vid[0].pause(vid[0].currentTime);
    }
    function stopAtSpecificTime(){ 
+   	switch(Math.floor(vid[0].currentTime)){
+   		case 3:
+   			//getCurTime();
+     		$(".popVid-data").show();
+     		//vid[0].play();
+     		break;
+     	case 5:
+     	    if(!isClicked){
+     	    	$(poPdemo).fadeOut()
+     	    }
+     	    break;
+       case 9: 
+	       //getCurTime();
+	       $(".vid-data").show();
+	       //video.play();
+	       break;
+   	}
+    /*
     if(Math.floor(vid.currentTime) === 3){
-     getCurTime();
-     $(".popVid-data").show();
-     vid.play();
-    }
+         getCurTime();
+         $(".popVid-data").show();
+         vid.play();
+        }*/
+    
 	//$("#poPdemo").delay(5000).fadeOut();
-    else if(Math.floor(vid.currentTime) === 9){
-     getCurTime();
-     $(".vid-data").show();
-     video.play();
-     }
+    // else if(Math.floor(vid.currentTime) === 9){
+     // getCurTime();
+     // $(".vid-data").show();
+     // video.play();
+     // }
    }
+   
+   function checkAndUpdateStatus(){
+   	var currentTime = vid[0].currentTime;
+   	if(currentTime >= 5 && !isClicked && $(".popVid-data").is(":visible")){
+   		$(".popVid-data").fadeOut();
+   	}
+   	// switch(Math.floor(currentTime)){
+   		// case (currentTime >= 5) :
+   			// if(!isClicked && $(".popVid-data").is(":visible")){
+   				// $(".popVid-data").fadeOut();
+   			// }
+   			// break;
+   	// }
+   }
+   
+   function bindEvents(){
+   	vid.on("progress", function(){
+   		stopAtSpecificTime();
+   	});
+   	vid.on("seeked", function(){
+   		checkAndUpdateStatus();
+   	});
+   }
+   
+   function init(){
+   	bindEvents();
+   }
+   
+   init();
+   
     demo.addEventListener("click", function(){
-      vid.pause();
+      vid[0].pause();
     });
     close.addEventListener("click", function(){
      vid.play();
@@ -95,6 +144,7 @@
    
    poPdemo.addEventListener("click", function(){
     popvideo.pause();
+    isClicked = true;
     $(".myModal").show();
    });
    close.addEventListener("click", function(){
