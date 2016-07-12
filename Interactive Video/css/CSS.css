@@ -1,0 +1,95 @@
+.vid-cont{
+	position: relative;
+	margin: 0 auto;
+    width: 600px;
+}
+.popVid-data{
+	position: absolute;
+	/*width: 120px;
+	height: 75px;*/
+	background-color: #fff;
+	border: 1px solid #efefef;
+	top: 20px;
+    left: 2%;
+	display: none;
+	font-size: 14px;
+	z-index: 1;
+}
+.vid-data{
+	position: absolute;
+	width: 75px;
+	height: 36px;
+	background-color: #fff;
+	border: 1px solid #efefef;
+	top: 20px;
+    left: 12%;
+	display: none;
+	font-size: 14px;
+	z-index: 1;
+	transition: opacity 2s linear;
+}
+.ssvid-data{
+	position: absolute;
+	width: 75px;
+	height: 36px;
+	background-color: #fff;
+	border: 1px solid #efefef;
+	top: 20px;
+    left: 12%;
+	display: none;
+	font-size: 14px;
+	z-index: 1;
+	transition: opacity 2s linear;
+}
+.vid-data p{
+	font-size: 18px;
+	margin-top:0;
+	background: #88563a; 
+    background: -webkit-linear-gradient(#88563a, #ba8755);
+    background: -o-linear-gradient(#88563a, #ba8755);
+    background: -moz-linear-gradient(#88563a, #ba8755);
+    background: linear-gradient(#88563a, #ba8755);
+}
+
+.ssvid-data p{
+	font-size: 18px;
+	margin-top:0;
+	background: #88563a; 
+    background: -webkit-linear-gradient(#88563a, #ba8755);
+    background: -o-linear-gradient(#88563a, #ba8755);
+    background: -moz-linear-gradient(#88563a, #ba8755);
+    background: linear-gradient(#88563a, #ba8755);
+}
+input[type="checkbox"]:hover{
+	outline: 1px solid #88563a;
+}
+.btnRight{
+	float: right;
+	margin: 0 -2% 2% 0;
+}
+.vid-data .modal-header{padding: 0;}
+#ingredients ul{
+	list-style: none;
+	display: none;
+}
+label{
+	display: block !important;
+	margin: 10px 0 0 20px;
+}
+.modal-backdrop{
+	background: none !important;
+	position: relative;
+}
+.modal-content{
+	width: 50%;
+	left:16%;
+}
+.innerIngre{
+	display: none;
+}
+.sec-modelContent{
+	width: 60%;
+	top: -11px;
+    float: left;
+    left: 12%;
+}

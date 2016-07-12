@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interactive Video</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/CSS.css">
+</head>
+<body>
+		<div class="vid-cont">
+			<div class="popVid-data">
+				<!--<p>Ingredients List</p>-->
+				<button class="btn btn-default" data-toggle="modal" data-target="#myModal" id="poPdemo">Check</button>
+				<div class="modal" id="myModal">
+				  <div class="modal-dialog">
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				        <h4 class="modal-title">Ingredients</h4>
+				      </div>
+				      <div class="modal-body">
+				        <ol>
+				        	<li>Fogg</li>
+				        	<li>Salt</li>
+				        	<li>Milk</li>
+				        	<li>Banana</li>
+				        </ol>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			</div>
+			
+			<div class="vid-data">
+				<button class="btn btn-default btnRight" data-toggle="modal" data-target="#myModalnew" id="demo">Check1</button>
+					<div class="modal" id="myModalnew">
+					  <div class="modal-dialog">
+					    <div class="modal-content sec-modelContent">
+					      <div class="modal-header">
+					        <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					        <p class="modal-title">Select the ingredients you are watching</p>
+					      </div>
+					      <div class="modal-body">
+							<label><input name="myInput" id="name1" type="checkbox">Fogg</input></label>
+							<label><input name="myInput" id="name2" type="checkbox">Spoon</input></label>
+							<label><input name="myInput" id="name3" type="checkbox">Milk</input></label>
+							<label><input name="myInput" id="name4" type="checkbox">Banana</input></label>
+							<button class="btn btn-default btnRight"  onclick="myFunction()" id="demonew">Check</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+			</div>
+			
+			<!--<div class="ssvid-data">
+				<p>Select the ingredients you are watching</p>
+				
+					<label><input name="myInput" id="one" value="One" type="checkbox">Milk</input></label>
+					<label><input name="myInput" id="two" value="Two" type="checkbox">Banana</input></label>
+					<label><input name="myInput" id="three" value="Three" type="checkbox">Salt</input></label>
+					<label><input name="myInput" id="four" value="Four" type="checkbox">Spoon</input></label>
+				
+				<button class="btn btn-default btnRight" onclick="ssFunction()" id="ssdemo">ssCheck</button>
+			</div>-->
+			
+			<video  id="myfirstVideo" width="500" height="300" controls autoplay="true">
+			  <source src="Video/Ingredient-Pancakes-You.mp4" type="video/mp4">
+			</video>
+		</div>
+		
+	    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+	    <script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
+
+
+
+
